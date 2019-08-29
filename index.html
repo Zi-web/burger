@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Lend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU>" type="text/javascript"></script>
+    <script src="icon_customImage.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/maps.js"></script>
+  </head>
+  <body>
+    <!------ПЕРВЫЙ БЛОК (шапка с выезжающим меню)-------->
+    <header id class="header" class="header">
+      <div class="header__wrapper">
+      <div class="header__menu">
+        <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="#content">Главная</a>
+          <a href="#assortment">Наш ассортимент</a>
+          <a href="#">Наши рестораны</a>
+          <a href="#contacts">Контакты</a>
+        </div>
+
+        <div id="main">
+          <button class="openbtn" onclick="openNav()">☰</button>  
+        </div>
+      </div>
+      <div class="header__logo">
+        <img src="img/5842996fa6515b1e0ad75add.png" alt="logo">
+      </div>
+      <div class="header__phone">
+        <a class="header__phone-number  header__phone-number1" href="tel:375293898980">+375 25 600 30 30</a>
+        <a class="header__phone-number  header__phone-number2" href="tel:375293898980">+375 29 300 30 30</a>
+      </div>
+      </div>
+    </header>
+
+    <section id="content" class="content">
+      <div class="slideshow-container">
+        <div class="mySlides fade  slide1"></div>
+        <div class="mySlides fade  slide2"></div>
+        <div class="mySlides fade  slide3"></div>
+        <div class="mySlides fade  slide4"></div>
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        <div style="text-align:center" class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+     </div>
+    </section>
+<!---------
+    <div class="content__wrapper">
+        <h1 class="content__title">Find the people you've crossed paths with the people you've crossed paths with</h1>
+        <div class="content__items">
+          <a href="#" class="content__item">
+            <img src="img/bfoto_ru_4291.jpg" alt="img">
+          </a>
+          <a href="#" class="content__item">
+            <img src="img/sakura-2686483_1920.jpg" alt="img">
+          </a>
+          <a href="#" class="content__item">
+            <img src="img/ps_vudu_logo.png" alt="img">
+          </a>
+        </div>
+      </div>--------->
+<!---------ВТОРОЙ БЛОК (ГАЛЕРЕЯ ТАБЫ С ФОТО)--------->  
+    <section class="gallery" id="assortment">
+      <header class="gallery__header">
+        <h2>Наш ассортимент:</h2>
+        <p></p>
+      </header>
+      <div class="gallery__wrapper">
+        <div id="myBtnContainer" class="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> Показать все</button>
+          <button class="btn" onclick="filterSelection('first')"> Макси бургер</button>
+          <button class="btn" onclick="filterSelection('second')"> Классический бургер</button>
+          <button class="btn" onclick="filterSelection('third')"> Шаурма</button>
+    
+        </div>
+
+        <div class="container">
+    
+          <div class="filterDiv first">
+            <figure class="card">
+              <img src="img/s1200.jpg" alt="img" class="card__img">
+              <figcaption class="card__text">Бургер «Биг Кинг XXL»</figcaption>
+            </figure>
+          </div>
+        
+          <div class="filterDiv first">
+            <figure class="card">
+              <img src="img/2018Food_Appetizing_hamburger_with_French_fries__bell_pepper_and_sauce_127373_.jpg" class="card__img">
+              <figcaption class="card__text">Двойной воппер с сыром</figcaption>
+            </figure>
+          </div>
+        
+          <div class="filterDiv first">
+             <figure class="card">
+              <img src="img/2018Food_Large_appetizing_hamburger_on_a_wooden_board_126464_.jpg" class="card__img">
+              <figcaption class="card__text">Бургер «Биг Кинг»</figcaption>
+            </figure>
+          </div>
+        
+          <div class="filterDiv second">
+            <figure class="card">
+              <img src="img/burger-bulochka-kartoshka-gamburger.jpg" class="card__img">
+              <figcaption class="card__text">Бургер «Чикен филе»</figcaption>
+            </figure>
+          </div>
+      
+          <div class="filterDiv second">
+            <figure class="card">
+              <img src="img/fastfud-sendvich-gamburger.jpg" class="card__img">
+              <figcaption class="card__text">Бургер «Шведский»</figcaption>
+            </figure>
+          </div>
+        
+          <div class="filterDiv second">
+            <figure class="card">
+              <img src="img/2018Food_Appetizing_hamburger_with_French_fries__bell_pepper_and_sauce_127373_.jpg" class="card__img">
+              <figcaption class="card__text">Бургер «Фиш»</figcaption>
+            </figure>
+          </div>
+    
+          <div class="filterDiv third">
+            <figure class="card">
+              <img src="img/nZe0S72TkUw.jpg" class="card__img">
+              <figcaption class="card__text"> Цезарь-ролл</figcaption>
+            </figure>
+          </div>
+      
+          <div class="filterDiv third">
+            <figure class="card">
+              <img src="img/img_5807.jpg" class="card__img">
+              <figcaption class="card__text"> Воппер-ролл</figcaption>
+            </figure>
+          </div>
+     
+          <div class="filterDiv third">
+            <figure class="card">
+              <img src="img/IMG_1159.jpg" class="card__img">
+              <figcaption class="card__text"> Классик-ролл</figcaption>
+            </figure>
+          </div>
+
+        </div>
+    </section>
+<!---------ТРЕТИЙ БЛОК (ВЕРТИКАЛЬНЫЕ ТАБЫ)---------->  
+    <section class="our-specialist">
+      <header class="our-specialist__header">
+        <h2>Наши рестораны</h2>
+        <p></p>
+      </header>
+      <div class="our-specialist__wrapper">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Minsk')" id="defaultOpen">
+            <div class="tab__text">
+              Минск</span>
+            </div>
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Gomel')">
+            <div class="tab__text">
+              Гомель
+            </div>
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Grodno')">
+            <div class="tab__text">
+              Гродно
+            </div>
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Brest')">
+            <div class="tab__text">
+              Брест
+            </div>
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Vitebsk')">
+            <div class="tab__text">
+              Витебск
+            </div>
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Mogilev')">
+            <div class="tab__text">
+              Могилев
+            </div>
+          </button>
+        </div>
+        <div class="tab__content">
+          <div id="Minsk" class="tabcontent" style="width: 100%; height: 410px">
+          </div>
+
+          <div id="Gomel" class="tabcontent">
+            <h3>Руководитель проектов</h3>
+            <p>"Главным в нашей компании всегда был и остается заказчик. Поэтому я стараюсь не только разговаривать на языке заказчика, но и смотрю на задачу с его точки зрения. Думаю, поэтому к нам часто обращаются за поддержкой в вопросах освещения крупнейщие строительные компании России"</p> 
+          </div>
+
+          <div id="Grodno" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+
+          <div id="Brest" class="tabcontent">
+            <h3>Minsk</h3>
+            <p>Minsk is the capital of Belarus.</p>
+          </div>
+
+          <div id="Vitebsk" class="tabcontent">
+            <h3>Minsk</h3>
+            <p>Minsk is the capital of Belarus.</p>
+          </div>
+
+          <div id="Mogilev" class="tabcontent">
+            <h3>Minsk</h3>
+            <p>Minsk is the capital of Belarus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-------ЧЕТВЕРТЫЙ БЛОК (ПРЕИМУЩЕСТВА, незацикленный СЛАЙДЕР)------->
+    <section class="advantage">
+      <header class="advantage__header">
+        <h2 class="advantage__title">Наши преимущества</h2>
+        <p class="advantage__subtitle"></p>
+      </header>
+      <div class="slider">
+        <div class="slider__wrapper">
+          <div class="slider__item">
+            <div class="slider__card  slider__card--1">
+              <h3 class="slider__card-title">Быстрая доставка</h3>
+              <p class="slider__card-text">Уже сейчас наш каталог насчитывает более 300 тыс. наименований, и мы продолжаем пополнять его новой продукцией.</p>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__card  slider__card--2">
+              <h3 class="slider__card-title">Широкий ассортимент</h3>
+              <p class="slider__card-text"></p>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__card  slider__card--3">
+              <h3 class="slider__card-title">Бонусы и подарки</h3>
+              <p class="slider__card-text"></p>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__card  slider__card--4">
+              <h3 class="slider__card-title">Отличное обслуживание</h3>
+              <p class="slider__card-text"></p>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__card  slider__card--5">
+              <h3 class="slider__card-title">Гарантия качества</h3>
+              <p class="slider__card-text">Уже сейчас наш каталог насчитывает более 300 тыс. наименований, и мы продолжаем пополнять его новой продукцией.</p>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__card  slider__card--6">
+              <h3 class="slider__card-title">Надежные поставщики</h3>
+              <p class="slider__card-text">Уже сейчас наш каталог насчитывает более 300 тыс. наименований, и мы продолжаем пополнять его новой продукцией.</p>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__card  slider__card--7">
+              <h3 class="slider__card-title">Сезонные скидки</h3>
+              <p class="slider__card-text">Уже сейчас наш каталог насчитывает более 300 тыс. наименований, и мы продолжаем пополнять его новой продукцией.</p>
+            </div>
+          </div>
+        </div>
+        <a class="slider__control slider__control_left" href="#" role="button"></a>
+        <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+      </div>
+    </section>
+<!-------ПЯТЫЙ БЛОК (Подвал с картой попап)------->
+    <footer class="footer" id="contacts">
+      <div class="footer__wrapper">
+        <div class="contact">
+          <p>2019</p>
+          <p>ООО "Бургер"</p>
+        </div>
+        <div class="address">
+          <p>г. Минск, пр-т Независимости 175, пом. 1</p>
+          <span class="map">Карта проезда</span>
+        </div>
+        <div class="phone">
+          <a class="phone__number" href="tel:375293898980">+375 29 389 89 80</a>
+          <button class="phone__btn">Заказать звонок</button>
+        </div>
+      </div>
+    </footer>
+
+  <div class="popup-map  modal-content">
+    <div id="ya-map" class="ya-map">
+      <span class="ya-map__close"></span>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae7143dbdbd012d04ec4c7effd61bcb28c705b4af0ba0633da198d24ababf01a4&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <div class="popup-form  modal-content2">
+        <div class="form-wrap">  
+         <span class="form__close"></span>
+        <form action="send.php" method="post" class="form" id="form" name="form" onsubmit="return validate();">
+          <div class="form__header">
+            <h3 class="form__title">Закажите звонок</h3>
+          </div>
+          <div class="input__wrap">
+
+          <div class="popup-consultation__input  popup-consultation__input--name">
+            <input type="text" name="name" placeholder="Ваше имя" id="name"> <span style='color:red' id='namef'></span>
+          </div>
+          
+          <div class="popup-consultation__input  popup-consultation__input--tel">
+            <input type="tel" id="tel" name="tel" placeholder="Ваш номер телефона"> <span style='color:red' id='telf'></span>
+          </div>
+
+          <div class="popup-consultation__btn">
+           <input type="submit" value="Перезвоните мне" class="btn--popup-consultation">
+          </div>
+        </div>
+        </form>
+      </div>
+  </div>
+
+  <script type="text/javascript" src="js/toggle-sidebar.js"></script>
+  <script type="text/javascript" src="js/filter-tabs.js"></script>
+  <script type="text/javascript" src="js/vertical-tabs.js"></script>
+  
+  <script type="text/javascript" src="js/slider.js"></script>
+  <script type="text/javascript" src="js/popup-map.js"></script>
+  <script type="text/javascript" src="js/popup-form.js"></script>
+  
+  <script type="text/javascript" src="js/full-slider.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
+  <script type="text/javascript" src="js/validate-form.js"></script>
+  </body>
+</html>
