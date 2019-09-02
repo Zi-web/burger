@@ -387,7 +387,7 @@ template {
 }
 .form {
   width: 100%;
-  border: 1px solid #7901ad;
+  border: 1px solid #f6a52d;
   border-radius: 7px;
   overflow: hidden;
   margin: 0 auto;
@@ -399,7 +399,7 @@ template {
   flex-direction: column;
 }
 .form__header {
-  background-color: #7901ad;
+  background-color: #f6a52d;
   width: 100%;
   height: 40px;
   margin: 0;
@@ -463,7 +463,7 @@ template {
   width: 380px;
   height: 50px;
   border-radius: 10px;
-  box-shadow: 0 5px 10px 0 #7901ad;
+  box-shadow: 0 5px 10px 0 #f6a52d;
   margin-bottom: 10px;
 }
 .btn--popup-consultation {
@@ -481,7 +481,7 @@ template {
   cursor: pointer;
   margin: auto;
   color: white;
-  background-color: #7901ad;
+  background-color: #f6a52d;
   font-size: 16px;
   padding: 0;
 }
@@ -1173,6 +1173,7 @@ template {
 .tab__content {
   box-sizing: border-box;
   width: 65%;
+  padding: 0;
 }
 /* Style the buttons inside the tab */
 .tab button {
@@ -1204,7 +1205,7 @@ template {
 .tabcontent {
   box-sizing: border-box;
   float: left;
-  padding: 0px 33px;
+  padding: 0;
   border: 1px solid #ccc;
   width: 100%;
   border-left: none;
@@ -1613,7 +1614,7 @@ template {
   .slider__card-text {
     font-size: 14px;
   }
-  .tab__content {
-    display: none;
-  }
+  /*.tab__content {
+		display: none;
+	}*/
 }
