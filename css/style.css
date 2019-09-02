@@ -1618,3 +1618,13 @@ template {
 		display: none;
 	}*/
 }
+@media screen and (max-width: 468px) {
+  .ya-map__close {
+    cursor: pointer;
+    position: absolute;
+    right: -35px;
+    top: -25px;
+    width: 32px;
+    height: 32px;
+  }
+}
